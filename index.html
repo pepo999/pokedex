@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokèdex</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/pokemon-icon-512x512-ivi5uex5.png" type="image/x-icon">
+</head>
+<body>
+    <div class="poke-container">
+    <h1>pokèdex</h1>
+    <div class="buttons">
+        <button onclick="loadPreviousPage()">previous page</button>
+        <button onclick="loadNextPage()">next page</button>
+    </div>
+    <div class="contour">
+    <ul id="pokemon-list">
+
+    </ul>
+</div>
+    <div class="buttons">
+        <button onclick="loadPreviousPage()">previous page</button>
+        <button onclick="loadNextPage()">next page</button>
+    </div>
+</div>
+</body>
+<script src="./services/poke-service.js"></script>
+<script src="./app.js"></script>
+</html>

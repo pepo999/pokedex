@@ -1,0 +1,55 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+*{
+    border: solid 1px white;
+}
+
+h1{
+    text-align: center;
+    margin: none;
+}
+
+.poke-container{
+    width: 500px;
+    /* height: 650px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 25, 9);
+}
+
+button{
+    width: 90px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: rgb(37, 37, 37);
+    color: #fafafa;
+    margin: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-beetween;
+}
+
+#pokemon-list{
+    width: 333px;
+    
+    background-color: rgb(37, 37, 37);
+    color: #fafafa;
+}
+
+.contour{
+    width: 400px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+}
