@@ -7,9 +7,9 @@ html, body{
     background-color: black;
 }
 
-*{
+/* *{
     border: solid 1px white;
-}
+} */
 
 h1{
     text-align: center;
@@ -17,7 +17,7 @@ h1{
 }
 
 .poke-container{
-    width: 500px;
+    width: 700px;
     /* height: 650px; */
     display: flex;
     flex-direction: column;
@@ -41,14 +41,13 @@ button{
 }
 
 #pokemon-list{
-    width: 333px;
-    
+    width: 500px;   
     background-color: rgb(37, 37, 37);
     color: #fafafa;
 }
 
 .contour{
-    width: 400px;
+    width: 600px;
     background-color: #fafafa;
     display: flex;
     justify-content: center;
