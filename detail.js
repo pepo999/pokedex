@@ -47,12 +47,18 @@ function displayPokemon(pokemon) {
     if(type === 'fighting') {
         pokemonImg.style.backgroundColor = 'brown'
     }
-    // if(type === 'bug') {
-    //     pokemonImg.style.backgroundColor = 'darkolivegreen'
-    // }
-    // if(type === 'flying') {
-    //     pokemonImg.style.backgroundColor = 'lightsteelblue'
-    // }
+    if(type === 'psychic') {
+        pokemonImg.style.backgroundColor = 'mediumorchid'
+    }
+    if(type === 'normal') {
+        pokemonImg.style.backgroundColor = 'rosybrown'
+    }
+    if(type === 'rock') {
+        pokemonImg.style.backgroundColor = 'saddlebrown'
+    }
+    if(type === 'ghost') {
+        pokemonImg.style.backgroundColor = 'darkslateblue'
+    }
     getStats(pokemon.stats)
 }
 
