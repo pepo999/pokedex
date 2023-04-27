@@ -12,21 +12,27 @@
     <div class="poke-container">
     <!-- <h1>pokèdex</h1> -->
     <span>
-        <img class="title-image" src="./assets/pokedex_logo.png" alt="">
+        <img class="title-image" src="./assets/pokedex_logo.png" alt="pokedex-logo">
     </span>
     <div class="buttons">
-        <button onclick="loadPreviousPage()">previous page</button>
-        <button onclick="loadNextPage()">next page</button>
+        <button onclick="loadPreviousPage()">previous</button>
+        <button onclick="loadNextPage()">next</button>
     </div>
     <div class="contour">
     <ul id="pokemon-list">
 
     </ul>
 </div>
-    <div class="buttons">
-        <button onclick="loadPreviousPage()">previous page</button>
-        <button onclick="loadNextPage()">next page</button>
-    </div>
+<div class="bottom-container">
+    <div class="bottom-left"></div>
+  <div class="grid-button">
+    <button class="top" onclick=""></button>
+    <button class="right" onclick="loadNextPage()"></button>
+    <button class="center"></button>
+    <button class="bottom"></button>
+    <button class="left" onclick="loadPreviousPage()"></button>
+  </div>
+</div>
 </div>
 </body>
 <script src="./services/poke-service.js"></script>
