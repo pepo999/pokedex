@@ -35,6 +35,11 @@ function display(page) {
         newLi.appendChild(pokemonText);
         newLi.appendChild(pokemonImg);
         pokemonList.appendChild(newLi);
-        // console.log(page);
     }  
 }
+
+// function displayAndre() {
+//     const html = actualPage.results
+//     .map(pokemon => `<div><strong>${pokemon.name}</strong></div>`).join('');
+//     document.getElementById('pokemon-container').innerHTML = html;
+// }
