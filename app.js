@@ -35,6 +35,6 @@ function display(page) {
         newLi.appendChild(pokemonText);
         newLi.appendChild(pokemonImg);
         pokemonList.appendChild(newLi);
-        console.log(page);
+        // console.log(page);
     }  
 }

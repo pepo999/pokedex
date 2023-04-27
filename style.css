@@ -42,7 +42,7 @@ button{
 
 #pokemon-list{
     width: 90%;   
-    height: 780; 
+    /* height: 780px;  */
     background-color: rgb(37, 37, 37);
     color: #fafafa;
     display: grid;
