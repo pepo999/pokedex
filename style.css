@@ -18,11 +18,11 @@ h1{
 
 .poke-container{
     width: 700px;
-    /* height: 650px; */
+    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(255, 25, 9);
+    background-color: rgb(255, 76, 31);
 }
 
 button{
@@ -41,14 +41,24 @@ button{
 }
 
 #pokemon-list{
-    width: 500px;   
+    width: 90%;   
+    height: 780; 
     background-color: rgb(37, 37, 37);
     color: #fafafa;
+    display: grid;
+    grid-template-columns: 1fr repeat(20);
+    border-radius: 5px;
 }
 
 .contour{
     width: 600px;
+    height: 800px;
     background-color: #fafafa;
     display: flex;
     justify-content: center;
+    border-radius: 5px;
+}
+
+.poke-li{
+height: 1fr repeat(20);
 }
