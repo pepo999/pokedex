@@ -1,8 +1,6 @@
 class PokeService {
 
-    static POKE_URL = ' https://pokeapi.co/api/v2/pokemon';
-    // static POKE_IMAGE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
-    static POKE_ID = 'https://pokeapi.co/api/v2/pokemon-form/1/'
+    static POKE_URL = 'https://pokeapi.co/api/v2/pokemon'
 
     static getNextPokemon(page) {
         if(page === undefined || page.next === null) {
@@ -20,8 +18,8 @@ class PokeService {
         }       
     }
 
-    // static getImagePokemon(pokemonId) {     
-    //         return fetch(this.POKE_IMAGE + pokemonId).then(resp => resp.json());      
-    // }
-
+    static getDetail(name){
+        const url=this.POKE_URL + '/'+ name;
+        return fetch(url).then(resp => resp.json())
+    }
 }

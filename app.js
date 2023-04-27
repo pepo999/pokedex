@@ -27,13 +27,12 @@ function display(page) {
         const element = pokemonArr[i];
         const pokemonName = element.name;
         const pokemonText = document.createTextNode(pokemonName);
-        const pokemonUrl = element.url;
-        const pokemonImg = document.createElement('img')
-        pokemonImg.src = pokemonUrl;
+        const pokemonLink=document.createElement('a');
+        pokemonLink.href = `./detail.html?pokemon=${element.name}`;
         const newLi = document.createElement('li');
         newLi.classList.add('poke-li');
-        newLi.appendChild(pokemonText);
-        newLi.appendChild(pokemonImg);
+        pokemonLink.appendChild(pokemonText);
+        newLi.appendChild(pokemonLink);
         pokemonList.appendChild(newLi);
     }  
 }
