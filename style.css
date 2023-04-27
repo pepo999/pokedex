@@ -18,14 +18,12 @@ h1{
 
 .poke-container{
     width: 700px;
-    height: 1000px;
+    height: 1050px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(255, 76, 31);
-    overflow: scroll;
-    border-radius: 10px;
-    margin: 20px 0px
+    border-radius: 20px;
 }
 
 .title-image{
@@ -34,6 +32,7 @@ h1{
 }
 
 button{
+    border: none;
     width: 90px;
     height: 35px;
     border-radius: 3px;
@@ -51,13 +50,14 @@ button{
 
 #pokemon-list{
     width: 500px;   
-    /* height: 780px;  */
+    height: 450px; 
+    overflow: scroll;
     min-height: 600px;
     background-color: rgb(37, 37, 37);
     color: #fafafa;
-    display: grid;
-    grid-template-columns: 1fr repeat(20);
-    border-radius: 5px;
+    /* display: grid;
+    grid-template-columns: 1fr repeat(20); */
+    border-radius: 10px;
 }
 
 .contour{
@@ -67,11 +67,12 @@ button{
     background-color: #fafafa;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .poke-li{
 height: 1fr repeat(20);
+margin: 20px 0px;
 }
 
 .bottom-container{
@@ -85,7 +86,7 @@ height: 1fr repeat(20);
     background-color: green;
     width: 300px;
     height: 140px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .grid-button{

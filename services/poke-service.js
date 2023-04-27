@@ -2,7 +2,7 @@ class PokeService {
 
     static POKE_URL = ' https://pokeapi.co/api/v2/pokemon';
     // static POKE_IMAGE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
-    // static POKE_ID = 'https://pokeapi.co/api/v2/pokemon-form/1/'
+    static POKE_ID = 'https://pokeapi.co/api/v2/pokemon-form/1/'
 
     static getNextPokemon(page) {
         if(page === undefined || page.next === null) {
