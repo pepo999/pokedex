@@ -59,6 +59,9 @@ function displayPokemon(pokemon) {
     if(type === 'ghost') {
         pokemonImg.style.backgroundColor = 'darkslateblue'
     }
+    if(type === 'poison') {
+        pokemonImg.style.backgroundColor = 'blueviolet'
+    }
     getStats(pokemon.stats)
 }
 
