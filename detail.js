@@ -12,7 +12,7 @@ function displayPokemon(pokemon) {
     const textContainer = document.createElement('h2');
     const typeOfPokemon = document.createElement('span');
     const type = pokemon.types[0].type.name;
-    const typeText = document.createTextNode(type);
+    const typeText = document.createTextNode('main type: ' + type);
     typeOfPokemon.appendChild(typeText);
     textContainer.appendChild(nameText);
     const pokemonImg = document.createElement('img');
