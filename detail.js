@@ -1,8 +1,8 @@
 const urlSerchParams = new URLSearchParams(window.location.search)
 
-const pokemonName= urlSerchParams.get('pokemon')
+const pokemonName = urlSerchParams.get('pokemon')
 
-PokeService.getDetail(pokemonName).then(pokemon=>{
+PokeService.getDetail(pokemonName).then(pokemon => {
     displayPokemon(pokemon);
 })
 
@@ -23,43 +23,43 @@ function displayPokemon(pokemon) {
     content.appendChild(pokemonImg);
     console.log(pokemon)
     //change color of background based on type
-    if(type === 'normal') {
+    if (type === 'normal') {
         pokemonImg.style.backgroundColor = 'blanchedalmond'
     }
-    if(type === 'fire') {
+    if (type === 'fire') {
         pokemonImg.style.backgroundColor = 'firebrick'
     }
-    if(type === 'water') {
+    if (type === 'water') {
         pokemonImg.style.backgroundColor = 'aqua'
     }
-    if(type === 'grass') {
+    if (type === 'grass') {
         pokemonImg.style.backgroundColor = 'forestgreen'
     }
-    if(type === 'bug') {
+    if (type === 'bug') {
         pokemonImg.style.backgroundColor = 'darkolivegreen'
     }
-    if(type === 'flying') {
+    if (type === 'flying') {
         pokemonImg.style.backgroundColor = 'lightsteelblue'
     }
-    if(type === 'electric') {
+    if (type === 'electric') {
         pokemonImg.style.backgroundColor = 'gold'
     }
-    if(type === 'fighting') {
+    if (type === 'fighting') {
         pokemonImg.style.backgroundColor = 'brown'
     }
-    if(type === 'psychic') {
+    if (type === 'psychic') {
         pokemonImg.style.backgroundColor = 'mediumorchid'
     }
-    if(type === 'normal') {
+    if (type === 'normal') {
         pokemonImg.style.backgroundColor = 'rosybrown'
     }
-    if(type === 'rock') {
+    if (type === 'rock') {
         pokemonImg.style.backgroundColor = 'saddlebrown'
     }
-    if(type === 'ghost') {
+    if (type === 'ghost') {
         pokemonImg.style.backgroundColor = 'darkslateblue'
     }
-    if(type === 'poison') {
+    if (type === 'poison') {
         pokemonImg.style.backgroundColor = 'blueviolet'
     }
     getStats(pokemon.stats)
@@ -67,13 +67,28 @@ function displayPokemon(pokemon) {
 
 function getStats(statsArray) {
     const statsUl = document.createElement('ul');
-    let returnArr = [];
     for (let index = 0; index < statsArray.length; index++) {
         const newLi = document.createElement('li');
         const element = statsArray[index];
         const statText = document.createTextNode(element.stat.name + ': ' + element.base_stat)
         newLi.appendChild(statText);
         statsUl.appendChild(newLi);
-       content.appendChild(statsUl)
+        content.appendChild(statsUl)
     }
+}
+
+//-------------------------------------------------------------------------
+
+function createNewPokemon(pokemonObject) {
+    const myPokemon = new Pokemon(pokemonObject.name);
+
+    for (let i = 0; i < pokemonObject.stats.length; i++) {
+        const statObject = pokemonObject.stats[i];
+        myPokemon.addStats(statObject.name, statObject.base_stat)
+    }
+    return myPokemon;
+}
+
+function displayPokemon1(pokemon) {
+    console.log(pokemon)
 }
