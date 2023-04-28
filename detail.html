@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokèdex</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/pokemon-icon-512x512-ivi5uex5.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/pokemon-icon-512x512-ivi5uex5.png"
+        type="image/x-icon">
 </head>
+
 <body>
     <div class="poke-container">
-    <!-- <h1>pokèdex</h1> -->
-    <span>
-        <img class="title-image" src="./assets/pokedex_logo.png" alt="pokedex-logo">
-    </span>
-    <div class="buttons">
-        <button onclick="parent.location='index.html'">PREVIOUS</button>
-        <button onclick="loadNextPage()">NEXT</button>
-    </div>
-    <div class="contour">
-        <div id="content">
-
+        <!-- comment lines -->
+        <h1 id="pokemon-name"></h1>
+        <ul id="pokemon-stats"></ul>
+        <ul id="pokemon-types"></ul>
+        <!-- stop comment -->
+        <span>
+            <img class="title-image" src="./assets/pokedex_logo.png" alt="pokedex-logo">
+        </span>
+        <div class="buttons">
+            <button onclick="parent.location='index.html'">PREVIOUS</button>
+            <button onclick="loadNextPage()">NEXT</button>
         </div>
-</div>
-<div class="bottom-container">
-    <div class="bottom-left"></div>
-  <div class="grid-button">
-    <button class="top" onclick=""></button>
-    <button class="right" onclick="loadNextPage()"></button>
-    <button class="center"></button>
-    <button class="bottom"></button>
-    <button class="left" onclick="loadPreviousPage()"></button>
-  </div>
-</div>
-</div>
+        <div class="contour">
+            <div id="content">
+                <h1 id="pokemon-name"></h1>
+                <ul id="pokemon-stats"></ul>
+                <ul id="pokemon-types"></ul>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <div class="bottom-left"></div>
+            <div class="grid-button">
+                <button class="top" onclick=""></button>
+                <button class="right" onclick="loadNextPage()"></button>
+                <button class="center"></button>
+                <button class="bottom"></button>
+                <button class="left" onclick="loadPreviousPage()"></button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./services/poke-service.js"></script>
+<script src="./model/pokemon.js"></script>
 <script src="./detail.js"></script>
+
 </html>
