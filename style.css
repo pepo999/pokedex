@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@font-face {
+    font-family: pokemon;
+    src: url('./assets/PKMN\ RBYGSC.ttf');
+}
 
 html,
 body {
@@ -11,9 +15,10 @@ body {
     box-sizing: border-box;
 }
 
-/* *{
-    border: solid 1px white;
-} */
+*{
+    /* border: solid 1px white; */
+    font-family: pokemon;
+}
 
 h1 {
     text-align: center;
