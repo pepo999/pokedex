@@ -128,9 +128,9 @@ button{
 }
 
 .back-btn{
-    border-radius: 200px;
-    height: 100px;
-    width: 100px;
+    border-radius: 20px;
+    height: 60px;
+    width: 80px;
     box-shadow: 1px 1px 3px black;
 }
 
