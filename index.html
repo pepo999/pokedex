@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokèdex</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css">
     <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/pokemon-icon-512x512-ivi5uex5.png" type="image/x-icon">
 </head>
 <body>
@@ -23,14 +24,15 @@
     </ul>
 </div>
 <div class="bottom-container">
+    <button class="back-btn">BACK</button>
     <div class="bottom-left"></div>
-  <div class="grid-button">
-    <button class="top"></button>
-    <button class="right" onclick="getNextPage()"></button>
-    <button class="center"></button>
-    <button class="bottom"></button>
-    <button class="left" onclick="getPreviousPage()"></button>
-  </div>
+    <div class="grid-button">
+        <button class="top" onclick="scrollUp()"></button>
+        <button class="right" onclick="loadNextPage()"></button>
+        <button class="center"></button>
+        <button class="bottom" onclick="scrollDown()"></button>
+        <button class="left" onclick="loadPreviousPage()"></button>
+    </div>
 </div>
 </div>
 </body>

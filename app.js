@@ -47,13 +47,26 @@ function displayPokemons(pokemons) {
     for (let i = 0; i < pokemons.length; i++) {
         const element = pokemons[i];
         const pokemonName = element.name;
-        const pokemonText = document.createTextNode(pokemonName);
+        const pokemonText = document.createTextNode(element.id + ' ' +  pokemonName);
         const pokemonLink=document.createElement('a');
         pokemonLink.href = `./detail.html?pokemon=${element.name}`;
+        const pokemonImage = document.createElement('img');
+        pokemonImage.src = element.sprites.front_default;
         const newLi = document.createElement('li');
         newLi.classList.add('poke-li');
         pokemonLink.appendChild(pokemonText);
         newLi.appendChild(pokemonLink);
+        newLi.appendChild(pokemonImage);
         pokemonList.appendChild(newLi);
     }  
+}
+
+function scrollUp() {
+    const pokemonList = document.getElementById('pokemon-list');
+    pokemonList.scrollBy(0,-50); 
+}
+
+function scrollDown() {
+    const pokemonList = document.getElementById('pokemon-list');
+    pokemonList.scrollBy(0,50);
 }

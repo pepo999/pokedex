@@ -17,18 +17,13 @@ function displayPokemon(pokemon) {
     const content = document.getElementById('content');
     const nameText = document.createTextNode(pokemon.id + ' ' + pokemon.name);
     const textContainer = document.createElement('h2');
-    const typeOfPokemon = document.createElement('span');
-    const type = pokemon.types[0].type.name;
-    const typeText = document.createTextNode('main type: ' + type);
-    typeOfPokemon.appendChild(typeText);
     textContainer.appendChild(nameText);
     const pokemonImg = document.createElement('img');
     pokemonImg.src = pokemon.sprites.front_default;
     pokemonImg.classList.add('pokemon-image');
     content.appendChild(textContainer);
-    content.appendChild(typeOfPokemon);
+    getTypes(pokemon.types)
     content.appendChild(pokemonImg);
-    console.log(pokemon)
     //change color of background based on type
     // if (type === 'normal') {
     //     pokemonImg.style.backgroundColor = 'blanchedalmond'
@@ -69,49 +64,70 @@ function displayPokemon(pokemon) {
     // if (type === 'poison') {
     //     pokemonImg.style.backgroundColor = 'blueviolet'
     // }
-    getStats(pokemon.stats)
+    const detailsContainer = document.getElementById('details-container');
+    getStats(pokemon.stats);
+    getAbilities(pokemon.abilities);
+    content.appendChild(detailsContainer)
+}
+
+function getTypes(typesArray) {
+const typesSpan = document.createElement('span');
+let typeText = document.createTextNode('');
+if(typesArray.length === 1) {
+typeText = document.createTextNode('type: ');
+} else {
+    typeText = document.createTextNode('types: ');
+}
+typesSpan.appendChild(typeText)
+for (const type of typesArray) {
+    const typeTextNode = document.createTextNode(type.type.name + ' ')
+        typesSpan.appendChild(typeTextNode);        
+}
+content.appendChild(typesSpan);
 }
 
 function getStats(statsArray) {
+    const detailsContainer = document.getElementById('details-container')
+    const statsTitle = document.createTextNode('Stats:');
+    const br = document.createElement('hr');
+    const hr = document.createElement('hr');
     const statsUl = document.createElement('ul');
+    statsUl.appendChild(hr)
+    statsUl.appendChild(statsTitle)
+    statsUl.appendChild(br)
     for (let index = 0; index < statsArray.length; index++) {
         const newLi = document.createElement('li');
         const element = statsArray[index];
-        const statText = document.createTextNode(element.stat.name + ': ' + element.base_stat)
+        const statText = document.createTextNode(element.stat.name + ': ' + element.base_stat);    
         newLi.appendChild(statText);
         statsUl.appendChild(newLi);
-        content.appendChild(statsUl)
+detailsContainer.appendChild(statsUl);
     }
 }
 
-//-------------------------------------------------------------------------
+function getAbilities(abilitiesArray) {
+    const detailsContainer = document.getElementById('details-container')
+    const abilitiesTitle = document.createTextNode('Abilities:');
+    const br = document.createElement('hr');
+    const hr = document.createElement('hr');
+    const abilitiesUl = document.createElement('ul');
+    abilitiesUl.appendChild(hr)
+    abilitiesUl.appendChild(abilitiesTitle)
+    abilitiesUl.appendChild(br)
+    for (let index = 0; index < abilitiesArray.length; index++) {
+        const newLi = document.createElement('li');
+        const element = abilitiesArray[index];
+        const statText = document.createTextNode(element.ability.name)
+        newLi.appendChild(statText);
+        abilitiesUl.appendChild(newLi);
+        detailsContainer.appendChild(abilitiesUl)
+    }
+}
 
-// function createNewPokemon(pokemonObject) {
-//     const myPokemon = new Pokemon(pokemonObject.name, pokemonObject.stats, pokemonObject.types);
+function scrollUp() {
+    content.scrollBy(0,-50); 
+}
 
-//     for (let i = 0; i < pokemonObject.stats.length; i++) {
-//         const statObject = pokemonObject.stats[i];
-//         myPokemon.addStats(statObject.name, statObject.base_stat)
-//     }
-
-//     for (let i = 0; i < pokemonObject.types.length; i++) {
-//         const typeObj = pokemonObject.types[i];
-//         myPokemon.addTypes(typeObj.type.name, typeObj.type.url)
-//     }
-//     return myPokemon;
-// }
-
-// function displayPokemon1(pokemon) {
-//     document.getElementById('pokemon-name').innerHTML = pokemon.name;
-
-//     const statsContainer = document.getElementById('pokemon-stats');
-//     for (const stat of pokemon.stats) {
-//         statsContainer.innerHTML += `<li><strong>${stat.name}</strong>: ${stat.baseValue}</li>`;
-//     }
-
-//     const typesContainer = document.getElementById('pokemon-types');
-//    for (const type of pokemon.types) {
-//     typesContainer.innerHTML += `<li><strong>${type.name}</strong>: ${type.url}</li>`;
-//    }
-
-// }
+function scrollDown() {
+    content.scrollBy(0,50);
+}
