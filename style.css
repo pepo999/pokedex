@@ -193,9 +193,11 @@ button{
 }
 
 .pokemon-image{
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 20px;
-    width: 150px;
+      width: 270px; 
+    /* margin-top: 50px; */
+    /* margin-bottom: 100px; */
 }
 
 a{

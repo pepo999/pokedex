@@ -30,45 +30,45 @@ function displayPokemon(pokemon) {
     content.appendChild(pokemonImg);
     console.log(pokemon)
     //change color of background based on type
-    if (type === 'normal') {
-        pokemonImg.style.backgroundColor = 'blanchedalmond'
-    }
-    if (type === 'fire') {
-        pokemonImg.style.backgroundColor = 'firebrick'
-    }
-    if (type === 'water') {
-        pokemonImg.style.backgroundColor = 'aqua'
-    }
-    if (type === 'grass') {
-        pokemonImg.style.backgroundColor = 'forestgreen'
-    }
-    if (type === 'bug') {
-        pokemonImg.style.backgroundColor = 'darkolivegreen'
-    }
-    if (type === 'flying') {
-        pokemonImg.style.backgroundColor = 'lightsteelblue'
-    }
-    if (type === 'electric') {
-        pokemonImg.style.backgroundColor = 'gold'
-    }
-    if (type === 'fighting') {
-        pokemonImg.style.backgroundColor = 'brown'
-    }
-    if (type === 'psychic') {
-        pokemonImg.style.backgroundColor = 'mediumorchid'
-    }
-    if (type === 'normal') {
-        pokemonImg.style.backgroundColor = 'rosybrown'
-    }
-    if (type === 'rock') {
-        pokemonImg.style.backgroundColor = 'saddlebrown'
-    }
-    if (type === 'ghost') {
-        pokemonImg.style.backgroundColor = 'darkslateblue'
-    }
-    if (type === 'poison') {
-        pokemonImg.style.backgroundColor = 'blueviolet'
-    }
+    // if (type === 'normal') {
+    //     pokemonImg.style.backgroundColor = 'blanchedalmond'
+    // }
+    // if (type === 'fire') {
+    //     pokemonImg.style.backgroundColor = 'firebrick'
+    // }
+    // if (type === 'water') {
+    //     pokemonImg.style.backgroundColor = 'aqua'
+    // }
+    // if (type === 'grass') {
+    //     pokemonImg.style.backgroundColor = 'forestgreen'
+    // }
+    // if (type === 'bug') {
+    //     pokemonImg.style.backgroundColor = 'darkolivegreen'
+    // }
+    // if (type === 'flying') {
+    //     pokemonImg.style.backgroundColor = 'lightsteelblue'
+    // }
+    // if (type === 'electric') {
+    //     pokemonImg.style.backgroundColor = 'gold'
+    // }
+    // if (type === 'fighting') {
+    //     pokemonImg.style.backgroundColor = 'brown'
+    // }
+    // if (type === 'psychic') {
+    //     pokemonImg.style.backgroundColor = 'mediumorchid'
+    // }
+    // if (type === 'normal') {
+    //     pokemonImg.style.backgroundColor = 'rosybrown'
+    // }
+    // if (type === 'rock') {
+    //     pokemonImg.style.backgroundColor = 'saddlebrown'
+    // }
+    // if (type === 'ghost') {
+    //     pokemonImg.style.backgroundColor = 'darkslateblue'
+    // }
+    // if (type === 'poison') {
+    //     pokemonImg.style.backgroundColor = 'blueviolet'
+    // }
     getStats(pokemon.stats)
 }
 
