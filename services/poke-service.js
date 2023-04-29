@@ -6,7 +6,8 @@ class PokeService {
         if(page === undefined || page.next === null) {
             return fetch(this.POKE_URL).then(resp => resp.json());
         } else if(page !== undefined){
-           return fetch(page.next).then(resp => resp.json());
+           return fetch(page.next).then(resp => resp.json())
+           .then(pokemonPage => this.getDetails(pokemonPage.results));
         }       
     }
 
@@ -14,7 +15,7 @@ class PokeService {
         if(page === undefined || page.previous === null) {
             return fetch(this.POKE_URL).then(resp => resp.json());
         } else if(page !== undefined){
-           return fetch(page.previous).then(resp => resp.json());
+           return fetch(page.previous).then(resp => resp.json())
         }       
     }
 
@@ -22,4 +23,5 @@ class PokeService {
         const url=this.POKE_URL + '/'+ name;
         return fetch(url).then(resp => resp.json())
     }
+
 }

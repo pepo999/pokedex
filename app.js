@@ -19,7 +19,7 @@ function loadPreviousPage() {
     })
 }
 
-function display(page) {   
+function display(page) {    
     const pokemonList = document.getElementById('pokemon-list');
     pokemonList.innerHTML = '';
     const pokemonArr = page.results;
@@ -37,8 +37,6 @@ function display(page) {
     }  
 }
 
-// function displayAndre() {
-//     const html = actualPage.results
-//     .map(pokemon => `<div><strong>${pokemon.name}</strong></div>`).join('');
-//     document.getElementById('pokemon-container').innerHTML = html;
-// }
+function displayWithDetails(page) {
+
+}
