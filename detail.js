@@ -88,7 +88,7 @@ content.appendChild(typesSpan);
 
 function getStats(statsArray) {
     const detailsContainer = document.getElementById('details-container')
-    const statsTitle = document.createTextNode('Stats:');
+    const statsTitle = document.createTextNode('Stats');
     const br = document.createElement('hr');
     const hr = document.createElement('hr');
     const statsUl = document.createElement('ul');
@@ -107,7 +107,7 @@ detailsContainer.appendChild(statsUl);
 
 function getAbilities(abilitiesArray) {
     const detailsContainer = document.getElementById('details-container')
-    const abilitiesTitle = document.createTextNode('Abilities:');
+    const abilitiesTitle = document.createTextNode('Abilities');
     const br = document.createElement('hr');
     const hr = document.createElement('hr');
     const abilitiesUl = document.createElement('ul');
