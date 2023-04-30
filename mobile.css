@@ -113,7 +113,7 @@ button{
     align-items: center;
     padding-top: 10px;
     width: 95%;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 
@@ -198,8 +198,8 @@ button{
     border-radius: 10px;
     margin: 20px;
       width: 290px; 
-    /* margin-top: 50px; */
-    /* margin-bottom: 100px; */
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 a{
@@ -211,10 +211,17 @@ a{
     padding: 0px;
 }
 
+li{
+padding-left: 20px;
+}
+
 ul{
-    margin-left: 10px;
+    margin-left: 0px;
     padding: 0px 0px 0px 0px;
 }
 
+.title-detail{
+    font-size: 30px;
+}
 
 }

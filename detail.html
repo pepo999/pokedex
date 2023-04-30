@@ -33,10 +33,10 @@
             </div>
         </div>
         <div class="bottom-container">
-            <button class="back-btn" onclick="parent.location='index.html'">BACK</button>
+            <button class="back-btn" onclick="history.back()">BACK</button>
             <div class="bottom-left"></div>
             <div class="grid-button">
-                <button class="top" onclick="scrollUp()"></button>
+                <button class="top" id="top-btn" onclick="scrollUp()"></button>
                 <button class="right" onclick="loadNextPage()"></button>
                 <button class="center"></button>
                 <button class="bottom" onclick="scrollDown()"></button>
