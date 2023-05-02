@@ -1,23 +1,5 @@
 'use strict'
 
-// let actualPage;
-
-// loadNextPage();
-
-// function loadNextPage() {
-//     PokeService.getNextPokemon(actualPage).then(pokemon => {
-//         actualPage = pokemon;
-//         // console.log(actualPage);
-//          display(actualPage);
-//     })
-// }
-
-// function loadPreviousPage() {
-//     PokeService.getPreviousPokemon(actualPage).then(pokemon => {
-//         actualPage = pokemon;
-//         display(actualPage);
-//     })
-// }
 
 let actualPageIndex;
 
